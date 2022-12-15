@@ -38,3 +38,8 @@ I tried to refactor the name of the models, one more time I started having error
 After that failed I took the first project that I submitted and add the login, signup and reset password there.
 I also add a check on each endpoint so an user can only vote or see the polls when logged in 
 - [x] Login functionality added with checking of the user auth on each path
+---
+
+[Old repo that I broke... a different one](https://github.com/DevOpsDorset2022/CA2-backend)
+
+---
