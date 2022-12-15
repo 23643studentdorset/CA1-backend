@@ -1,4 +1,4 @@
-{% if latest_question_list %}
+
 {% load static %}
 
 
@@ -16,13 +16,20 @@
 
     <!-- header hero block -->
     <header class="hero-block hero-block-js">
-        <div class="hero-text-container">
+        <div  style="padding: 15px;" class="hero-text-container">
             <h1>Movies Listing </h1>
+            <ul>{% if user.is_authenticated %}
+                <h1>Hi {{ user.username }}!</h1>
+                <a style="padding-right: 35px;" href="{% url 'logout' %}">Log Out</a>
+                <a href="{% url 'password_reset' %}">Reset Password</a>
+            </ul>
         </div>
     </header>
     <!-- main content with sections -->
     <main id="main">
+
         <ul>
+            {% if latest_question_list %}
             {% for question in latest_question_list %}
                 <div>
                    <a  href="{% url 'polls:detail' question.id %}">
@@ -33,6 +40,11 @@
         </ul>
         {% else %}
         <p>No polls are available.</p>
+        {% endif %}
+        {% else %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Log In</a>
+            <p><a href="{% url 'signup' %}">Sign Up</a></p>
         {% endif %}
     </main>
 
