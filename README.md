@@ -32,3 +32,9 @@ at some point we decided to drop the whole project and start over, this time wit
 - [x] Code is readable: consistency, right indentation, comments. 
 - [x] The application is accompanied by a short report (max. 500 words) or a ReadMe file. The report should explain the developing process of the application. 
 - [ ] Creativity: Do your own research and add any other functionality to your application. 
+---
+# CA2
+I tried to refactor the name of the models, one more time I started having error with the templates, even after changing the view methods.
+After that failed I took the first project that I submitted and add the login, signup and reset password there.
+I also add a check on each endpoint so an user can only vote or see the polls when logged in 
+- [x] Login functionality added with checking of the user auth on each path
